@@ -1,0 +1,5 @@
+priority_segment,customers,observed_churn,mean_clv_90d
+High churn risk (top 20%) / High CLV (top 25%),5,1.0,1255.0161340038637
+High churn risk (top 20%) / Lower CLV,463,0.6328293736501079,267.4949455486802
+Lower churn risk / High CLV (top 25%),580,0.1810344827586207,2427.788567217344
+Lower churn risk / Lower CLV,1289,0.3964313421256788,431.7359579407387

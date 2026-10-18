@@ -1,0 +1,19 @@
+{
+  "source": "YLTsai0609 public pre-engineered KKBox feature matrices",
+  "raw_source": "KKBox WSDM 2018 competition",
+  "train_rows": 709200,
+  "calibration_rows": 88650,
+  "test_rows": 88650,
+  "split": "Provided train matrix; stratified 50:50 calibration/final-test split of provided validation matrix, seed=42",
+  "feature_columns": [
+    "six_month_day_listen",
+    "six_month_satis",
+    "registered_via",
+    "age_under_26",
+    "last_last_churn",
+    "client_level_code",
+    "last_auto_renew",
+    "one_month_day_listen"
+  ],
+  "limitation": "Derived public matrices; no raw event timestamps, so benchmark split is stratified user holdout rather than temporal."
+}

@@ -1,0 +1,75 @@
+{
+  "primary_dataset": "UCI Online Retail II",
+  "benchmark_dataset": "KKBox Churn Prediction",
+  "lookback_days": 180,
+  "horizon_days": 90,
+  "split_cutoffs": {
+    "train": "2011-01-30",
+    "validation": "2011-04-30",
+    "test": "2011-07-30"
+  },
+  "selected_model": "RFM Logistic Regression",
+  "selected_features": [
+    "recency_days",
+    "frequency",
+    "monetary_log"
+  ],
+  "uci_test": [
+    {
+      "dataset": "UCI test",
+      "model": "Selected uncalibrated",
+      "feature_set": "recency_days+frequency+monetary_log",
+      "n": 2788,
+      "churn_prevalence": 0.4433285509325681,
+      "roc_auc": 0.7516566993627598,
+      "pr_auc": 0.6651775243385512,
+      "brier": 0.20773833593420168,
+      "brier_baseline": 0.24678834686059745,
+      "brier_skill_score": 0.15823279917043176,
+      "precision_at_10": 0.7168458781362007,
+      "recall_at_10": 0.16181229773462782,
+      "lift_at_10": 1.6169630325596502
+    },
+    {
+      "dataset": "UCI test",
+      "model": "Selected calibrated",
+      "feature_set": "recency_days+frequency+monetary_log",
+      "n": 2788,
+      "churn_prevalence": 0.4433285509325681,
+      "roc_auc": 0.7516566993627598,
+      "pr_auc": 0.6651775243385512,
+      "brier": 0.20511074603606458,
+      "brier_baseline": 0.24678834686059745,
+      "brier_skill_score": 0.1688799384359715,
+      "precision_at_10": 0.7168458781362007,
+      "recall_at_10": 0.16181229773462782,
+      "lift_at_10": 1.6169630325596502
+    }
+  ],
+  "uci_test_bootstrap_ci": [
+    {
+      "metric": "roc_auc",
+      "estimate": 0.7516566993627598,
+      "ci_95_low": 0.732602280679212,
+      "ci_95_high": 0.7694423683321835,
+      "n_bootstrap": 1000
+    },
+    {
+      "metric": "pr_auc",
+      "estimate": 0.6651775243385512,
+      "ci_95_low": 0.6357530911868496,
+      "ci_95_high": 0.697456245253902,
+      "n_bootstrap": 1000
+    },
+    {
+      "metric": "precision_at_10",
+      "estimate": 0.7168458781362007,
+      "ci_95_low": 0.6666666666666666,
+      "ci_95_high": 0.7741935483870968,
+      "n_bootstrap": 1000
+    }
+  ],
+  "uci_orders": 36969,
+  "uci_customers": 5878,
+  "data_hash": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb"
+}
